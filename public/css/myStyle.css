@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+     margin: 0;
+     padding: 0;
+     font-family: 'Poppins', 'Tahoma', sans-serif;
+}
+
+body {
+     background: #171717;
+     
+}
+
+/* index */
+
+.navbar {
+     background: #0b0000;
+     padding: 0.5rem 15%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.navbar-view {
+     background: none;
+     padding: 0.5rem 15%;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     position: fixed;
+     width: 100%;
+}
+
+.navbar > h1 {
+     color: #ffffff;
+}
+
+.navbar-view > h1 {
+     color: #ffffff;
+}
+
+.add-btn {
+     color: #ffffff;
+     font-size: 1rem;
+     padding: 0.5rem 1.5rem;
+     background: #df0707;
+     border: none;
+     border-radius: 0.5rem;
+     text-decoration: none;
+     transition: 0.2s ease-in;
+}
+
+i {
+     margin-right: 0.5rem;
+}
+
+.add-btn:hover {
+     background: #ba0c0c;
+     cursor: pointer;
+     text-decoration: none;
+}
+
+.main-container {
+     padding: 3rem 10%;
+     display: flex;
+     flex-flow: row wrap;
+     align-items: center;
+     justify-content: flex-start;
+     gap: 1.5rem;
+}
+
+.movie-container {
+     background: #0b0000;
+     transition: 0.2s ease-in;
+     width: 14rem;
+}
+
+.movie-container:hover {
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.movie-image {
+     height: 18rem;
+     width: 14rem;
+     object-fit: cover;
+}
+
+.movie-details {
+     padding: 1rem;
+     color: #ffffff;
+}
+
+.date-release {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.date {
+     font-size: 0.7rem;
+     font-weight: 400;
+}
+
+.genre {
+     font-size: 0.7rem;
+     font-weight: 200;
+}
+
+.title-container {
+     height: 3.7rem;
+}
+
+.title {
+     margin-top: 0.3rem;
+     margin-bottom: 1rem;
+     font-size: 1rem;
+     font-weight: 500;
+     display: -webkit-box;
+     overflow: hidden;
+     -webkit-line-clamp: 2;
+     -webkit-box-orient: vertical;
+}
+
+.movie-btn {
+     display: flex;
+     flex-flow: row nowrap;
+     align-items: center;
+     justify-content: space-between;
+     gap: 0.3rem;
+}
+
+.view-movie {
+     width: 100%;
+     padding: 0.4rem 0;
+     font-size: 0.7rem;
+     text-decoration: none;
+     background: #ffffff;
+     color: #000000;
+     border-radius: 0.4rem;
+     border: none;
+     cursor: pointer;
+     transition: 0.2s ease-in;
+     text-align: center;
+}
+
+.view-movie:hover {
+     background: #989898;
+}
+
+.sp {
+     margin: 0;
+}
+
+.edit-movie {
+     width: 100%;
+     padding: 0.4rem 0.4rem;
+     font-size: 0.7rem;
+     background: #131834;
+     color: #ffffff;
+     border-radius: 0.4rem;
+     border: none;
+     cursor: pointer;
+     transition: 0.2s ease-in;
+}
+
+.edit-movie:hover {
+     background: #242d61;
+}
+
+.delete-movie {
+     width: 100%;
+     padding: 0.4rem 0.4rem;
+     font-size: 0.7rem;
+     background: #df0707;
+     color: #ffffff;
+     border-radius: 0.4rem;
+     border: none; 
+     cursor: pointer;
+     transition: 0.2s ease-in;
+}
+
+.delete-movie:hover {
+     background: #ff2222;
+}
+
+.no-data {
+     margin: auto;
+}
+
+/* add movie */
+
+.form-container {
+     margin: 3rem 15%;
+}
+
+.header {
+     display: flex;
+     flex-flow: row nowrap;
+     align-items: center;
+     justify-content: flex-start;
+     gap: 1rem;
+     color: #ffffff;
+}
+
+.accent {
+     height: 2rem;
+     width: 0.2rem;
+     background: #ff1212;
+}
+
+.form-fields {
+     margin-top: 2rem;
+     height: 10rem;
+     width: 60%;
+}
+
+.row {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     flex-flow: row wrap;
+     gap: 2rem;
+     margin-bottom: 1.5rem;
+}
+
+.form-label {
+     color: #ffffff;
+     font-weight: 200;
+     font-size: 0.8rem;
+}
+
+.form-control {
+     width: 100%;
+     outline: none;
+     font-size: 1rem;
+     color: #ffffff;
+     background: #171717;
+     padding: 0.5rem 0.5rem;
+     border: 1px solid #ffffff;
+}
+
+.form-control:focus {
+     border: 1px solid #ff1212;
+}
+
+textarea {
+     resize: none;
+     height: 5rem;
+}
+
+.row-submit {
+     margin-top: 2rem;
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: flex-end;
+     align-items: center;
+     width: 100%;
+     gap: 1rem;
+}
+
+.btn-submit {
+     padding: 0.5rem 2rem;
+     color: #ffffff;
+     background: #df0707;
+     border: none;
+     border-radius: 0.5rem;
+     text-decoration: none;
+     font-size: 1rem;
+     transition: 0.2 ease-in;
+}
+
+.btn-submit:hover {
+     background: #ff1212;
+     cursor: pointer;
+}
+
+.btn-cancel {
+     padding: 0.5rem 2rem;
+     color: #ffffff;
+     background: none;
+     border: none;
+     border-radius: 0.5rem;
+     text-decoration: none;
+     font-size: 1rem;
+}
+
+.btn-cancel:hover {
+     background: #212121;
+}
+
+/* view-movie */
+
+.back {
+     text-decoration: none;
+     color: #ffffff;
+}
+
+.view-container {
+     display: flex;
+     flex-flow: row nowrap;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.details-container {
+     width: 50%;
+     height: 100vh;
+     background-color: #000000;
+}
+
+.view-details {
+     padding: 7rem 18%;
+     color: #ffffff;
+}
+
+.view-picture {
+     width: 50%;
+     height: 100vh;
+     position: relative;
+}
+
+.album-pic {
+     height: 15rem;
+     width: 10rem;
+     object-fit: cover;
+}
+
+.pic-details {
+     margin-top: 2rem;
+     display: flex;
+     align-items: flex-start;
+     justify-content: flex-start;
+     gap: 2.5rem;
+}
+
+.shadow {
+     height: 100vh;
+     width: 100%;
+     position: absolute;
+     background: linear-gradient(to right, #000000, rgba(0, 0, 0,0), rgba(0, 0, 0,0));
+     z-index: 1;
+}
+
+.view-pic {
+     height: 100vh;
+     width: 100%;
+     object-fit: cover;
+     object-position: center;
+     opacity: 0.5;
+}
+
+.pic-details > div > h2 {
+     font-weight: 700;
+}
+
+.row-details {
+     margin-top: 1rem;
+     display: flex;
+     flex-flow: column nowrap;
+     align-items: flex-start;
+     justify-content: space-between;
+}
+
+.key {
+     color: #ffffff;
+     font-weight: 400;
+     font-size: 0.9rem;
+     text-align: justify;
+}
+
+.value {
+     color: #ffffff;
+     font-weight: 200;
+     font-size: 0.9rem;
+     text-align: justify;
+}
+
+.other-details {
+     margin-top: 2rem;
+     display: flex;
+     flex-flow: column nowrap;
+     align-items: flex-start;
+     justify-content: flex-start;
+     gap: 1.5rem
+}

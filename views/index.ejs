@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" type="text/css" href="./css/myStyle.css">
+          <script src="https://kit.fontawesome.com/091cd4a75a.js" crossorigin="anonymous"></script>
+          <title>HOME</title>
+     </head>
+
+     <body>
+          <div class="navbar">
+               <h1><i class="fa-solid fa-film"></i>MOVIES</h1>
+
+               <div>
+                    <a href="/add-movie" class="add-btn"><i class="fa-solid fa-plus"></i> ADD MOVIE</a> 
+               </div>
+          </div>
+
+          <div class="main-container">
+               <% var data = JSON.parse(data) %>
+
+               <% if(data.movie.length != 0) {%>
+                    <% for(var i = 0; i < data.movie.length; i++) {%>
+                         <div class="movie-container">
+                              <img class="movie-image" src="/images/<%= data.movie[i].image %>">
+          
+                              <div class="movie-details">
+                                   <div class="date-release">
+                                        <p class="date">Date released</p>
+                                        <p class="genre"><%= data.movie[i].dateReleased %></p>
+                                   </div>
+          
+                                   <div class="title-container">
+                                        <p class="title"><%= data.movie[i].title %></p>
+                                   </div>
+                              
+                                   <div class="movie-btn">
+                                        <div style="flex-grow: 8">
+                                             <form action="/view-movie/<%= data.movie[i].id %>" method="get">
+                                                  <button type="submit" class="view-movie"><i class="fa-solid fa-play"></i>VIEW</button>  
+                                             </form>
+                                        </div>
+                                        
+                                        <div style="flex-grow: 1">
+                                             <form action="/edit-movie/<%= data.movie[i].id %>" method="get">
+                                                  <button type="submit" class="edit-movie"><i class="fa-solid fa-pen-to-square sp"></i></button>
+                                             </form>
+                                        </div>
+          
+                                        <div style="flex-grow: 1">
+                                             <form action="/delete-movie/<%= data.movie[i].id %>" method="get">
+                                                  <button type="submit" class="delete-movie" onclick="return confirm('Are you sure you want to delete this movie?')"><i class="fa-solid fa-trash sp"></i></button>
+                                             </form>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    <% } %>
+               <% } else {  %>
+                    <div class="no-data">
+                         <img src="./images/no_data.svg" style="height: 20rem;">
+                         <p style="margin-top: 3rem; color: #ffffff; font-size: 1.5rem; text-align: center">The movie list is empty</p>
+                    </div>
+               <% } %>
+          </div>
+     </body>
+</html>

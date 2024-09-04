@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" type="text/css" href="/css/myStyle.css">
+          <script src="https://kit.fontawesome.com/091cd4a75a.js" crossorigin="anonymous"></script>
+          <title><%= title %> | MOVIE</title>
+     </head>
+
+     <body>
+          <div class="navbar-view">
+               <h1><i class="fa-solid fa-film"></i>MOVIES</h1>
+          </div>
+
+          <div class="view-container">
+               <div class="details-container">
+                    <div class="view-details">
+                         <a class="back" href="/"><i class="fa-solid fa-chevron-left"></i> BACK</a>
+
+                         <div class="pic-details">
+                              <div>
+                                   <img class="album-pic" src="/images/<%= image %>">
+                              </div>
+
+                              <div>
+                                   <h2><%= title %></h2>
+
+                                   <div class="row-details">
+                                        <p class="key">Genre</p>
+                                        <p class="value"><%= genre %></p>
+                                   </div>
+
+                                   <div class="row-details">
+                                        <p class="key">Date released</p>
+                                        <p class="value"><%= dateReleased %></p>
+                                   </div>
+
+                                   <div class="row-details">
+                                        <p class="key">Director</p>
+                                        <p class="value"><%= director %></p>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="other-details">
+                              <div>
+                                   <p class="key">Plot</p>
+                                   <p class="value"><%= plot %></p>
+                              </div>
+
+                              <div>
+                                   <p class="key">Actors</p>
+                                   <p class="value"><%= actors %></p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="view-picture">
+                    <div class="shadow"></div>
+
+                    <img class="view-pic" src="/images/<%= image %>">
+               </div>
+          </div>
+     </body>
+</html>

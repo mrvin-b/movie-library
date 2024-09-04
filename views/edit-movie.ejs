@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" type="text/css" href="../css/myStyle.css">
+          <script src="https://kit.fontawesome.com/091cd4a75a.js" crossorigin="anonymous"></script>
+          <title>EDIT MOVIE</title>
+     </head>
+
+     <body>
+          <div class="navbar">
+               <h1><i class="fa-solid fa-film"></i>MOVIES</h1>
+          </div>
+
+          <div class="form-container">
+               <div class="header">
+                    <div class="accent"></div>
+
+                    <h2>Edit Movie</h2>
+               </div>
+
+               <div class="form-fields">
+                    <form action="/edit-movie/<%= id %>" enctype="multipart/form-data" method="post">
+                         <input type="hidden" value="<%= id %>">
+                         <div class="row">
+                              <div style="flex-grow: 10;">
+                                   <div>
+                                        <label for="movie_title" class="form-label">Title</label>   
+                                   </div>
+          
+                                   <div>
+                                        <input type="text" class="form-control" name="movie_title" value="<%= title %>" required>    
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div style="flex-grow: 5;">
+                                   <div>
+                                        <label for="movie_director" class="form-label">Director</label>   
+                                   </div>
+          
+                                   <div>
+                                        <input type="text" class="form-control" name="movie_director" value="<%= director %>" required>    
+                                   </div>
+                              </div>
+
+                         <div style="flex-grow: 5;">
+                                   <div>
+                                        <label for="movie_date" class="form-label">Date released</label>   
+                                   </div>
+          
+                                   <div>
+                                        <input type="date" class="form-control" name="movie_date" value="<%= dateReleased %>" required>    
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div style="flex-grow: 5;">
+                                   <div>
+                                        <label for="movie_actor" class="form-label">Actors</label>   
+                                   </div>
+          
+                                   <div>
+                                        <textarea class="form-control" name="movie_actor" required><%= actors %></textarea>
+                                   </div>
+                              </div>
+
+                              <div style="flex-grow: 5;">
+                                   <div>
+                                        <label for="movie_plot" class="form-label">Plot</label>   
+                                   </div>
+          
+                                   <div>
+                                        <textarea class="form-control" name="movie_plot" required><%= plot %></textarea> 
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div style="flex-grow: 5;">
+                                   <div>
+                                        <label for="movie_genre" class="form-label">Genre</label>   
+                                   </div>
+          
+                                   <div>
+                                        <input type="text" class="form-control" name="movie_genre" value="<%= genre %>" required>    
+                                   </div>
+                              </div>
+
+                              <div style="flex-grow: 5;">
+                                   <div>
+                                        <label for="movie_image" class="form-label">Image</label>   
+                                   </div>
+          
+                                   <div>
+                                        <input type="file" class="form-control" name="movie_image" required>    
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="row-submit">
+                              <a href="/" class="btn-cancel">CANCEL</a>
+                              <button class="btn-submit">UPDATE</button>
+                         </div>
+                    </form>
+               </div>
+          </div>
+     </body>
+</html>

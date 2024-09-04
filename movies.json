@@ -1,0 +1,24 @@
+{
+  "movie": [
+    {
+      "id": 1,
+      "title": "Encanto",
+      "director": "Joel Lamangan",
+      "dateReleased": "2022-12-12",
+      "actors": "Stephanie Beatriz, Wilmer Valderrama, Sarah-Nicole Robles, Señora Ozma\r\n\r\nJohn Leguizamo\r\nBruno Madrigal\r\n\r\nAlan Tudyk\r\nPico\r\n\r\nMaluma\r\nMariano Guzman\r\n\r\nJessica Darrow\r\nLuisa Madrigal\r\n\r\nDiane Guerrero\r\nIsabela Madrigal",
+      "plot": "The Madrigals are an extraordinary family who live hidden in the mountains of Colombia in a charmed place called the Encanto. The magic of the Encanto has blessed every child in the family with a unique gift -- every child except Mirabel. However, she soon may be the Madrigals last hope when she discovers that the magic surrounding the Encanto is now in danger.",
+      "genre": "Adventure/Family",
+      "image": "1669345749462.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Stranger Things",
+      "director": "Hanamichi Sakuragi",
+      "dateReleased": "2022-11-30",
+      "actors": "Millie Bobby Brown, Finn Wolfhard, Noah Schnapp, Caleb McLaughlin, Lucas Sinclair",
+      "plot": "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.",
+      "genre": "Horror",
+      "image": "1669345857278.jpg"
+    }
+  ]
+}
